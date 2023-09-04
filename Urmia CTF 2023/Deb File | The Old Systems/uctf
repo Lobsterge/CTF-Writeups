@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ -f /tmp/UCTFDEB/dont-delete-me ]; then
+	FLAG=`cat /tmp/UCTFDEB/dont-delete-me`
+	if ! command -v curl > /dev/null; then
+		echo 'Install curl and try again'
+		exit 1
+	else
+		curl 127.0.0.1:7327 --header "flag: $FLAG"
+	fi
+else
+	echo '404, there is no flag to be found'
+    exit 1
+fi
