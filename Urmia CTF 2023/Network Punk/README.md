@@ -6,7 +6,7 @@
 
 ### Solution:
 As with all network challenges i tried the low hanging fruit: searching "flag".
-And that gave me the tcp stream with the flag
+And that gave me the tcp stream with the flag:
 
 ![challenge2](challenge2.png)
 
