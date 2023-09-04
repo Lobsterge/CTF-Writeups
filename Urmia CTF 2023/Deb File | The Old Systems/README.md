@@ -6,10 +6,10 @@
 ##### FIles: [uctfdeb-0.0.1.deb](uctfdeb-0.0.1.deb)
 
 ### Solution:
-Firstly i ran bash```$ sudo dpkg -i uctfdeb-0.0.1.deb```,
+Firstly i ran ```$ sudo dpkg -i uctfdeb-0.0.1.deb```,
 after installing the package i found the bash script [uctf](uctf).
 
-bash```
+```bash
 #!/usr/bin/env bash
 
 if [ -f /tmp/UCTFDEB/dont-delete-me ]; then
@@ -28,11 +28,11 @@ fi
 
 After understanding what the script does it becomes just a simple matter of reading the flag:
 
-bash```
+```bash
 $ cat /tmp/UCTFDEB/dont-delete-me
 UCTF{c4n_p3n6u1n5_5urv1v3_1n_54l7_w473r}
 ```
 
 Flag: ```UCTF{c4n_p3n6u1n5_5urv1v3_1n_54l7_w473r}```
 
-Extra: After solving the challenge you can remove the package with bash```$ sudo dpkg -i uctfdeb-0.0.1.deb```.
+Extra: After solving the challenge you can remove the package with ```$ sudo dpkg -i uctfdeb-0.0.1.deb```.
