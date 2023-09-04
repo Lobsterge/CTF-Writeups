@@ -6,10 +6,10 @@
 ##### Files: [dorna.jpg](dorna.jpg)
 
 ### Solution:
-This being a steganography challenge and them giving us a password to use heavily hints to the use of [steghide](https://github.com/StefanoDeVuono/steghide)
+This being a steganography challenge and them giving us a password to use heavily hints to the use of [steghide](https://github.com/StefanoDeVuono/steghide).
 If we try to use steghide on the image with the provided password we can extract this [file](dorn4.txt)
 
-bash```
+```bash
 $ steghide extract -sf dorna.jpg
 Enter passphrase: 
 wrote extracted data to "dorn4.txt".
