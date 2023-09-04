@@ -12,7 +12,7 @@
 ### Solution:
 Literally just grep the file lol
 
-bash```
+```bash
 $ grep --text uctf{ -r
 data/com.google.android.gms/databases/icing-indexapi.db:text"uctf{l057_1n_urm14}�
 data/com.google.android.gms/databases/icing-indexapi.db:
