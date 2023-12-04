@@ -33,7 +33,7 @@ Filtering out the false positives we can find his [monkeytype account](https://m
 
 Using the wayback machine we can recover the [post](https://web.archive.org/web/20231130062319/https://kaspermellingencs.blogspot.com/2023/11/job-hunting.html)
 
-[!challenge2](challenge2.png)
+![challenge2](challenge2.png)
 
 We can now go to his [linkedin account](https://www.linkedin.com/in/kasper-mellingen-9b48202a2/) and claim our flag:
 
