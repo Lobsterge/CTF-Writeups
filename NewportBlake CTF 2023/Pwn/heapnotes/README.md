@@ -38,4 +38,4 @@ Next time puts is called we'll get a shell.
 
 Solve script: [solve.py](solve.py)
 
-Flag: ```nbctf{ur_w3lc0m3_qu454r_5abf2e}``
+Flag: ```nbctf{ur_w3lc0m3_qu454r_5abf2e}```
