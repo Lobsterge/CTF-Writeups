@@ -36,18 +36,19 @@ code = input(">>> ")
 safe_eval(code)
 ```
 
-We can bypass the character blacklist by using italics [https://lingojam.com/ItalicTextGenerator](https://lingojam.com/ItalicTextGenerator), same with the underscores we can use the unicode character ```＿``` (U+ff3f), the only thing we're missing is numbers.
-Thankfully, we're inside an eval, i used this function to replace the use of numbers in my payload:
+We can bypass the character blacklist by using [python's unicode compatibility](https://peps.python.org/pep-0672/), more specifically i used italics for the letters (i used this [site](https://lingojam.com/ItalicTextGenerator) to convert the letters). 
+For the underscores we can use the unicode character ```＿``` (U+ff3f), which when put together with a normal underscore gets normalized to a double underscore. 
+The only thing we're missing is numbers, thankfully we're inside an eval, i used this function to replace the use of numbers in my payload:
 
 ```py
 def true(n):
     return (("(()==())+"*n)[:-1])
 ```
 
-()==() evaluates to True, which in turn is 1, if we do True+True we get 2, see where i'm going?
-I initially were using italic True instead of ()==() but for some reason it was messing up in remote while it worked fine in local so i just changed it.
+```()==()``` evaluates to ```True```, which in turn is 1, if we do ```True+True``` we get 2, see where i'm going?
+I initially were using an italic ```True``` instead of ```()==()``` but for some reason it was messing up in remote while it worked fine in local so i just changed it.
 
-Once we bypass the blacklist the only thing standing between us and the flag is the lack of builtins, thankfully we can use some well known payloads to get the flag, specifically i used one from [here](https://github.com/salvatore-abello/python-ctf-cheatsheet/blob/main/pyjails/README.md#no-ascii-letters-no-double-underscores-no-builtins-no-quotesdouble-quotes-inside-eval--python38).
+Once we're able to bypass the blacklist the only thing standing between us and the flag is the lack of builtins, thankfully we can use some well known payloads to get the flag, specifically i used one from [here](https://github.com/salvatore-abello/python-ctf-cheatsheet/blob/main/pyjails/README.md#no-ascii-letters-no-double-underscores-no-builtins-no-quotesdouble-quotes-inside-eval--python38).
 
 Putting it all together:
 ```py
