@@ -6,7 +6,7 @@ So you thought you could escape RE by running to Web?
 
 ### Solution:
 The website will asks us for a number, if we input the correct one we will get our flag.
-The number is checked using a wasm program, we can get download it by simply going to [http://chal.bearcatctf.io:43806/static/REading.wasm](http://chal.bearcatctf.io:43806/static/REading.wasm).
+The number is checked using a wasm program, we can download it by simply going to [http://chal.bearcatctf.io:43806/static/REading.wasm](http://chal.bearcatctf.io:43806/static/REading.wasm).
 
 This is the decompiled wasm code:
 
@@ -29,7 +29,7 @@ import requests
 
 url="http://chal.bearcatctf.io:43806/check_number"
 
-r = requests.post(url, params={"number":1439206368})
+r = requests.post(url, params={"number":0x55c88be0})
 
 print(r.text)
 #BCCTF{Wh4t_k1nD_0F_m4tH_I5_tH4T?!?_8053c548}
