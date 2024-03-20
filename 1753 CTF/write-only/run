@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo docker build -t writeonly --build-arg="FLAG=flag{test}" .
+sudo docker run --rm -it -p 1337:1337 writeonly
