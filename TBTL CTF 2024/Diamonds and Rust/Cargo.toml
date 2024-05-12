@@ -1,0 +1,10 @@
+[package]
+name = "diamonds_and_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+secrecy = "0.8.0"
+
+[profile.release]
+opt-level = 0
