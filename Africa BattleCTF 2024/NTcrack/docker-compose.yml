@@ -1,0 +1,9 @@
+version: "3"  
+services:
+  pwn:
+    container_name: ntcrack
+    build: ./
+    ports:
+      - "1002:1002"
+    restart: unless-stopped
+    read_only: true
