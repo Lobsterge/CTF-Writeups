@@ -76,7 +76,7 @@ function v8_read64(where) {
 }
 ```
 
-Now that we have achieved full memory corruption inside the v8 heap we only need a way to hijack RIP, there were many possible ways but i opted for JIT-Spraying a Turbofan compiled function as seen in this [POC](//https://github.com/github/securitylab/blob/main/SecurityExploits/Chrome/v8/CVE_2023_3420/poc.js).
+Now that we have achieved full memory corruption inside the v8 heap we only need a way to hijack RIP, there were many possible ways but i opted for JIT-Spraying a Turbofan compiled function as seen in this [POC](https://github.com/github/securitylab/blob/main/SecurityExploits/Chrome/v8/CVE_2023_3420/poc.js).
 
 ```js
 ////https://github.com/github/securitylab/blob/main/SecurityExploits/Chrome/v8/CVE_2023_3420/poc.js
